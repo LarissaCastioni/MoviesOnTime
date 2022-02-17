@@ -49,29 +49,43 @@
                     <div>
                         <img class="populares__artistas___imagem" src="img/smith.jpg">
                     </div>
-                    <div class="populares__artistas___nome">Will Smith</div>
+                    <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
                     <div>
                         <img class="populares__artistas___imagem" src="img/angelina.jpg">
                     </div>
-                    <p class="populares__artistas___nome">Angelina Jolie</p>
+                    <p class="populares__artistas___nome"></p>
                 </div>
                 <div class="populares__artistas">
                     <img class="populares__artistas___imagem" src="img/jim_carrey.jpg">
-                    <p class="populares__artistas___nome">Jim Carrey</p>
+                    <p class="populares__artistas___nome"></p>
                 </div>
                 <div class="populares__artistas">
                     <img class="populares__artistas___imagem" src="img/jennifer_lawrence.jpg">
-                    <p class="populares__artistas___nome">Jennifer Lawrence</p>
+                    <p class="populares__artistas___nome"></p>
                 </div>
                 <div class="populares__artistas">
                     <img class="populares__artistas___imagem" src="img/keanu_reeves.jpg">
-                    <p class="populares__artistas___nome">Keanu Reeves</p>
+                    <p class="populares__artistas___nome"></p>
                 </div>
             </div>
         </section>
     </main>
 </body>
+<script>
+    let artists = '{"artists":[' +
+        '{"firstName":"Will","lastName":"Smith" },' +
+        '{"firstName":"Angelina","lastName":"Jolie" },' +
+        '{"firstName":"Jim","lastName":"Carrey" },' +
+        '{"firstName":"Jennifer","lastName":"Lawrence" },' +
+        '{"firstName":"Keanu","lastName":"Reeves"}]}';
+
+    const obj = JSON.parse(artists);
+    for (var i = 0; i <= 4; i++) {
+
+        document.getElementsByClassName("populares__artistas___nome")[i].innerHTML = obj.artists[i].firstName + " " + obj.artists[i].lastName;
+    }
+</script>
 
 </html>
