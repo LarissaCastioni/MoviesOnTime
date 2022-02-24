@@ -55,36 +55,36 @@
                     <div>
                         <img class="populares__artistas___imagem" src="img/angelina.jpg">
                     </div>
-                    <p class="populares__artistas___nome"></p>
+                    <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
-                    <img class="populares__artistas___imagem" src="img/jim_carrey.jpg">
-                    <p class="populares__artistas___nome"></p>
+                    <img class="populares__artistas___imagem">
+                    <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
                     <img class="populares__artistas___imagem" src="img/jennifer_lawrence.jpg">
-                    <p class="populares__artistas___nome"></p>
+                    <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
                     <img class="populares__artistas___imagem" src="img/keanu_reeves.jpg">
-                    <p class="populares__artistas___nome"></p>
+                    <div class="populares__artistas___nome"></div>
                 </div>
             </div>
         </section>
     </main>
 </body>
 <script>
-    let artists = '{"artists":[' +
-        '{"firstName":"Will","lastName":"Smith" },' +
-        '{"firstName":"Angelina","lastName":"Jolie" },' +
-        '{"firstName":"Jim","lastName":"Carrey" },' +
-        '{"firstName":"Jennifer","lastName":"Lawrence" },' +
-        '{"firstName":"Keanu","lastName":"Reeves"}]}';
+    var requestURL = 'https://api.themoviedb.org/3/person/popular?api_key=2f1a925c8c43d6a99e99cb33b29dcc36';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
 
-    const obj = JSON.parse(artists);
-    for (var i = 0; i <= 4; i++) {
-
-        document.getElementsByClassName("populares__artistas___nome")[i].innerHTML = obj.artists[i].firstName + " " + obj.artists[i].lastName;
+    request.onload = function () {
+        var response = request.response;
+        for (var i = 0; i <= 4; i++) {
+            document.getElementsByClassName("populares__artistas___nome")[i].innerHTML = response.results[i].name;
+        }
     }
 </script>
 
