@@ -47,13 +47,13 @@
             <div class="populares__artistas___container">
                 <div class="populares__artistas">
                     <div>
-                        <img class="populares__artistas___imagem" src="img/smith.jpg">
+                        <img class="populares__artistas___imagem">
                     </div>
                     <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
                     <div>
-                        <img class="populares__artistas___imagem" src="img/angelina.jpg">
+                        <img class="populares__artistas___imagem">
                     </div>
                     <div class="populares__artistas___nome"></div>
                 </div>
@@ -62,11 +62,11 @@
                     <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
-                    <img class="populares__artistas___imagem" src="img/jennifer_lawrence.jpg">
+                    <img class="populares__artistas___imagem">
                     <div class="populares__artistas___nome"></div>
                 </div>
                 <div class="populares__artistas">
-                    <img class="populares__artistas___imagem" src="img/keanu_reeves.jpg">
+                    <img class="populares__artistas___imagem">
                     <div class="populares__artistas___nome"></div>
                 </div>
             </div>
@@ -84,8 +84,10 @@
         var response = request.response;
         for (var i = 0; i <= 4; i++) {
             document.getElementsByClassName("populares__artistas___nome")[i].innerHTML = response.results[i].name;
+            document.getElementsByClassName("populares__artistas___imagem")[i].src = `https://image.tmdb.org/t/p/w500${response.results[i].profile_path}`;
         }
     }
+
 </script>
 
 </html>
