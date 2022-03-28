@@ -1,93 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <title>Home - Movies on Time</title>
-
-    <link rel="stylesheet" href="./css/main.css">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="menu-principal">
         <div class="header-1">
 
-            <div class="logo">
-                <img class="logo" src="img/logo.png" />
-            </div>
-            <div class="redes-sociais">
-                <ul>
+            <img class="logo" src="/img/logo.png">
+            <nav>
+                <ul class="redes-sociais">
                     <li>
-                        <a href="">
-                            <img class="icone-rede-social" src="./img/face.png" />
+                        <a href="/">
+                            <img class="icone-rede-social" src="/img/face.png">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img class="icone-rede-social" src="./img/tw.png" />
+                        <a href="/">
+                            <img class="icone-rede-social" src="/img/tw.png">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img class="icone-rede-social" src="./img/linkedin.png" />
+                        <a href="/">
+                            <img class="icone-rede-social" src="/img/linkedin.png">
                         </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section>
-            <div>
-                <h4 class="populares__titulo">
-                    Artistas Populares
-                </h4>
-            </div>
-            <div class="populares__artistas___container">
-                <div class="populares__artistas">
-                    <div>
-                        <img class="populares__artistas___imagem">
-                    </div>
-                    <div class="populares__artistas___nome"></div>
-                </div>
-                <div class="populares__artistas">
-                    <div>
-                        <img class="populares__artistas___imagem">
-                    </div>
-                    <div class="populares__artistas___nome"></div>
-                </div>
-                <div class="populares__artistas">
-                    <img class="populares__artistas___imagem">
-                    <div class="populares__artistas___nome"></div>
-                </div>
-                <div class="populares__artistas">
-                    <img class="populares__artistas___imagem">
-                    <div class="populares__artistas___nome"></div>
-                </div>
-                <div class="populares__artistas">
-                    <img class="populares__artistas___imagem">
-                    <div class="populares__artistas___nome"></div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <h1 class="titulo_artistas">Artistas Populares</h1>
+
+    <section class="populares_artistas__container">
+        <div class="populares_artistas">
+            <img class="populares__artistas__imagem">
+            <p class="populares__artistas__nome"></p>
+        </div>
+        <div class="populares_artistas">
+            <img class="populares__artistas__imagem">
+            <p class="populares__artistas__nome"></p>
+        </div>
+        <div class="populares_artistas">
+            <img class="populares__artistas__imagem">
+            <p class="populares__artistas__nome"></p>
+        </div>
+        <div class="populares_artistas">
+            <img class="populares__artistas__imagem">
+            <p class="populares__artistas__nome"></p>
+        </div>
+        <div class="populares_artistas">
+            <img class="populares__artistas__imagem">
+            <p class="populares__artistas__nome"></p>
+        </div>
+    </section>
+
+    <h1 class="titulo_filmes">Filmes Populares</h1>
+
+    <section class="populares_filmes__container">
+        <div class="populares_filmes">
+            <img class="populares_filmes__imagem">
+            <p class="populares_filmes__nome"></p>
+        </div>
+        <div class="populares_filmes">
+            <img class="populares_filmes__imagem">
+            <p class="populares_filmes__nome"></p>
+        </div>
+        <div class="populares_filmes">
+            <img class="populares_filmes__imagem">
+            <p class="populares_filmes__nome"></p>
+        </div>
+        <div class="populares_filmes">
+            <img class="populares_filmes__imagem">
+            <p class="populares_filmes__nome"></p>
+        </div>
+        <div class="populares_filmes">
+            <img class="populares_filmes__imagem">
+            <p class="populares_filmes__nome"></p>
+        </div>
+    </section>
 </body>
-<script>
-    var requestURL = 'https://api.themoviedb.org/3/person/popular?api_key=2f1a925c8c43d6a99e99cb33b29dcc36';
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
 
-    request.onload = function () {
-        var response = request.response;
-        for (var i = 0; i <= 4; i++) {
-            document.getElementsByClassName("populares__artistas___nome")[i].innerHTML = response.results[i].name;
-            document.getElementsByClassName("populares__artistas___imagem")[i].src = `https://image.tmdb.org/t/p/w500${response.results[i].profile_path}`;
-        }
-    }
-
-</script>
+<script type="text/javascript" src="js/arquivo.js"></script>
 
 </html>
