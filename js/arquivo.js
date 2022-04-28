@@ -1,4 +1,4 @@
-var artistsRequestURL = 'https://api.themoviedb.org/3/person/popular?api_key=2f1a925c8c43d6a99e99cb33b29dcc36'
+var artistsRequestURL = 'https://api.themoviedb.org/3/person/popular?api_key=2f1a925c8c43d6a99e99cb33b29dcc36&language=pt-BR'
 var artistsRequest = new XMLHttpRequest(); //XMLHttpRequest é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor.
 artistsRequest.open('GET', artistsRequestURL)
 artistsRequest.responseType = 'json'
@@ -12,8 +12,8 @@ artistsRequest.onload = function () {
     }
 }
 
-
-var moviesRequestURL = 'https://api.themoviedb.org/3/movie/popular?api_key=2f1a925c8c43d6a99e99cb33b29dcc36'
+//filmes populares
+var moviesRequestURL = 'https://api.themoviedb.org/3/movie/popular?api_key=2f1a925c8c43d6a99e99cb33b29dcc36&language=pt-BR'
 var moviesRequest = new XMLHttpRequest()
 moviesRequest.open('GET', moviesRequestURL)
 moviesRequest.responseType = 'json'
@@ -36,7 +36,9 @@ moviesRequest.onload = function () {
     document.getElementsByClassName("populares_filmes__nometop1")[0].innerHTML = responseMovie.results[0].title
 
 }
-var trailerRequestURL = `https://api.themoviedb.org/3/movie/406759/videos?api_key=2f1a925c8c43d6a99e99cb33b29dcc36`
+
+//trailer
+var trailerRequestURL = `https://api.themoviedb.org/3/movie/675353/videos?api_key=2f1a925c8c43d6a99e99cb33b29dcc36&language=pt-BR`
 var trailerRequest = new XMLHttpRequest()
 trailerRequest.open('GET', trailerRequestURL)
 trailerRequest.responseType = 'json'
@@ -45,11 +47,34 @@ trailerRequest.send()
 trailerRequest.onload = function () {
     var responseTrailer = trailerRequest.response;
     console.log(responseTrailer.results[0].key)
-    document.getElementsByClassName("trailer").src = `https://www.youtube.com/embed/${responseTrailer.results[0].key}`
+    document.getElementByClassId("trailer").src = `https://www.youtube.com/embed/${responseTrailer.results[0].key}`
 
 }
 
+//proximos lançamentos
+var movieUpcomingRequestURL = 'https://api.themoviedb.org/3/movie/upcoming?api_key=2f1a925c8c43d6a99e99cb33b29dcc36&language=pt-BR'
+var movieUpcomingRequest = new XMLHttpRequest();
+movieUpcomingRequest.open('GET', movieUpcomingRequestURL)
+movieUpcomingRequest.responseType = 'json'
+movieUpcomingRequest.send()
 
+movieUpcomingRequest.onload = function () {
+    var responseMovieUpcoming = movieUpcomingRequest.response
+    for (var i = 0; i <= 4; i++) {
+        let dataAtual = new Date(responseMovieUpcoming.results[i].release_date)
+        let dataNova = dataAtual.toLocaleDateString(
+            'pt-BR',
+            {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            }
+        )
+        document.getElementsByClassName("lancamentos_filmes__imagem")[i].src = `https://image.tmdb.org/t/p/w500${responseMovieUpcoming.results[i].poster_path}`
+        document.getElementsByClassName("lancamentos_filmes__nome")[i].innerHTML = responseMovieUpcoming.results[i].title
+        document.getElementsByClassName("lancamentos_filmes__data")[i].innerHTML = dataNova
+    }
+}
 
 
 

@@ -11,25 +11,24 @@
 </head>
 
 <body>
-    <header class="menu-principal">
-        <div class="header-1">
-
-            <img class="logo" src="/img/logo.png">
+    <header id="menu" class="menu-principal">
+        <div id="menu_header">
+            <h1 id="logo"></h1>
             <nav>
                 <ul class="redes-sociais">
                     <li>
                         <a href="/">
-                            <img class="icone-rede-social" src="/img/face.png">
+                            <img id="facebook" class="icone-rede-social" src="/img/face.png">
                         </a>
                     </li>
                     <li>
                         <a href="/">
-                            <img class="icone-rede-social" src="/img/tw.png">
+                            <img id="twitter" class="icone-rede-social" src="/img/tw.png">
                         </a>
                     </li>
                     <li>
                         <a href="/">
-                            <img class="icone-rede-social" src="/img/linkedin.png">
+                            <img id="linkedin" class="icone-rede-social" src="/img/linkedin.png">
                         </a>
                     </li>
                 </ul>
@@ -37,94 +36,137 @@
         </div>
     </header>
 
-    <section class="botoes">
-        <div id="divBusca">
-            <input type="text" id="txtBusca" />
-            <button id="btnBusca" type="submit">Buscar</button>
-        </div>
+    <nav>
+        <section class="botoes">
+            <div id="divBusca">
+                <input type="text" id="txtBusca" />
+                <button id="btnBusca" type="submit">Buscar</button>
+            </div>
 
-        <div class="categorias">
-            <button class="btnFilme" type="button">Filmes</button>
-            <button class="btnSérie" type="button">Séries</button>
-            <button class="btnAnime" type="button">Animes</button>
-            <button class="btnDesenhos" type="button">Desenhos</button>
-        </div>
+            <div class="categorias">
+                <button id="botao_filme" class="botoes_categoria" type="button">Filmes</button>
+                <button id="botao_serie" class="botoes_categoria" type="button">Séries</button>
+                <button id="botao_anime" class="botoes_categoria" type="button">Animes</button>
+                <button id="botao_desenhos" class="botoes_categoria" type="button">Desenhos</button>
+            </div>
 
-        <div class="cadastro">
-            <button class="btnEntrar" type="button">Entrar</button>
-            <button class="btnCadastro" type="button">Cadastre-se</button>
+            <div class="cadastro">
+                <button id="botao_entrar" class="botoes_entrar" type="button">Entrar</button>
+                <button id="botao_cadastro" class="botoes_entrar" type="button">Cadastre-se</button>
+            </div>
+        </section>
+    </nav>
+
+    <section class="artistas__populares">
+        <h2 class="titulo_artistas">Artistas Populares</h2>
+        <div class="populares_artistas__container">
+            <div class="populares_artistas">
+                <img class="populares__artistas__imagem">
+                <p class="populares__artistas__nome"></p>
+            </div>
+            <div class="populares_artistas">
+                <img class="populares__artistas__imagem">
+                <p class="populares__artistas__nome"></p>
+            </div>
+            <div class="populares_artistas">
+                <img class="populares__artistas__imagem">
+                <p class="populares__artistas__nome"></p>
+            </div>
+            <div class="populares_artistas">
+                <img class="populares__artistas__imagem">
+                <p class="populares__artistas__nome"></p>
+            </div>
+            <div class="populares_artistas">
+                <img class="populares__artistas__imagem">
+                <p class="populares__artistas__nome"></p>
+            </div>
         </div>
     </section>
 
-    <h1 class="titulo_artistas">Artistas Populares</h1>
-
-    <section class="populares_artistas__container">
-        <div class="populares_artistas">
-            <img class="populares__artistas__imagem">
-            <p class="populares__artistas__nome"></p>
-        </div>
-        <div class="populares_artistas">
-            <img class="populares__artistas__imagem">
-            <p class="populares__artistas__nome"></p>
-        </div>
-        <div class="populares_artistas">
-            <img class="populares__artistas__imagem">
-            <p class="populares__artistas__nome"></p>
-        </div>
-        <div class="populares_artistas">
-            <img class="populares__artistas__imagem">
-            <p class="populares__artistas__nome"></p>
-        </div>
-        <div class="populares_artistas">
-            <img class="populares__artistas__imagem">
-            <p class="populares__artistas__nome"></p>
-        </div>
-    </section>
-
-    <h1 class="titulo_filmes">Filmes Populares</h1>
-
-    <section class="populares_filmes__container">
-        <div class="populares_filmes">
-            <img class="populares_filmes__imagem">
-            <p class="populares_filmes__nome"></p>
-            <p class="populares_filmes__data"></p>
-        </div>
-        <div class="populares_filmes">
-            <img class="populares_filmes__imagem">
-            <p class="populares_filmes__nome"></p>
-            <p class="populares_filmes__data"></p>
-        </div>
-        <div class="populares_filmes">
-            <img class="populares_filmes__imagem">
-            <p class="populares_filmes__nome"></p>
-            <p class="populares_filmes__data"></p>
-        </div>
-        <div class="populares_filmes">
-            <img class="populares_filmes__imagem">
-            <p class="populares_filmes__nome"></p>
-            <p class="populares_filmes__data"></p>
-        </div>
-        <div class="populares_filmes">
-            <img class="populares_filmes__imagem">
-            <p class="populares_filmes__nome"></p>
-            <p class="populares_filmes__data"></p>
+    <section class="filmes__populares">
+        <h2 class="titulo_filmes">Filmes Populares</h2>
+        <div class="populares_filmes__container">
+            <div class="populares_filmes">
+                <img class="populares_filmes__imagem">
+                <p class="populares_filmes__nome"></p>
+                <p class="populares_filmes__data"></p>
+            </div>
+            <div class="populares_filmes">
+                <img class="populares_filmes__imagem">
+                <p class="populares_filmes__nome"></p>
+                <p class="populares_filmes__data"></p>
+            </div>
+            <div class="populares_filmes">
+                <img class="populares_filmes__imagem">
+                <p class="populares_filmes__nome"></p>
+                <p class="populares_filmes__data"></p>
+            </div>
+            <div class="populares_filmes">
+                <img class="populares_filmes__imagem">
+                <p class="populares_filmes__nome"></p>
+                <p class="populares_filmes__data"></p>
+            </div>
+            <div class="populares_filmes">
+                <img class="populares_filmes__imagem">
+                <p class="populares_filmes__nome"></p>
+                <p class="populares_filmes__data"></p>
+            </div>
         </div>
     </section>
 
     <section class="container_top1">
         <div class="box_top1">
-            <h1 class="titulo_top1">1º Lugar</h1>
-            <p class="populares_filmes__nometop1"></p>
-            <p class="populares_filmes__sinopse"></p>
+            <h2 class="titulo_top1">1º Lugar</h2>
+            <article>
+                <h3 class="populares_filmes__nometop1"></h3>
+                <p class="populares_filmes__sinopse"></p>
+            </article>
         </div>
         <div class="trailer_top1">
-            <iframe class="trailer">
-            </iframe>
+            <iframe id="trailer" width="560" height="315" src="https://www.youtube.com/embed/rsQEor4y2hg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
     </section>
 
+
+    <section class="filmes__lancamentos">
+        <h2 class="titulo_filmes__lancamentos">Próximos lançamentos de filmes</h2>
+        <div class="lancamentos_filmes__container">
+            <div class="lancamentos_filmes">
+                <img class="lancamentos_filmes__imagem">
+                <p class="lancamentos_filmes__nome"></p>
+                <p class="lancamentos_filmes__data"></p>
+            </div>
+            <div class="lancamentos_filmes">
+                <img class="lancamentos_filmes__imagem">
+                <p class="lancamentos_filmes__nome"></p>
+                <p class="lancamentos_filmes__data"></p>
+            </div>
+            <div class="lancamentos_filmes">
+                <img class="lancamentos_filmes__imagem">
+                <p class="lancamentos_filmes__nome"></p>
+                <p class="lancamentos_filmes__data"></p>
+            </div>
+            <div class="lancamentos_filmes">
+                <img class="lancamentos_filmes__imagem">
+                <p class="lancamentos_filmes__nome"></p>
+                <p class="lancamentos_filmes__data"></p>
+            </div>
+            <div class="lancamentos_filmes">
+                <img class="lancamentos_filmes__imagem">
+                <p class="lancamentos_filmes__nome"></p>
+                <p class="lancamentos_filmes__data"></p>
+            </div>
+        </div>
+    </section>
 </body>
 
 <script type="text/javascript" src="js/arquivo.js"></script>
+
+<footer>
+    <img class="logo_rodape" src="img/logo.png" alt="logo do site">
+</footer>
 
 </html>
