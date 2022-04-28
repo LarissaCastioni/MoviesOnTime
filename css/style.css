@@ -30,17 +30,21 @@ p {
     margin-left: 20px;
 }
 
-.logo {
-    height: auto;
+#logo {
+    height: 120px;
     width: 300px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    margin: 0;
 }
 
-.header-1 {
+#menu_header {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 100%
+    height: 100%;
+
 }
 
 body {
@@ -53,22 +57,26 @@ img {
 }
 
 .titulo_artistas,
-.titulo_filmes {
+.titulo_filmes,
+.titulo_filmes__lancamentos {
     color: #FFFFFF;
     font-size: 25px;
     font-weight: bold;
     margin-left: 30px;
     margin-top: 50px;
+
 }
 
 .populares_artistas__container,
-.populares_filmes__container {
+.populares_filmes__container,
+.lancamentos_filmes__container {
     display: grid;
     grid-row: auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: 200px 200px 200px 200px 200px;
     justify-content: space-around;
+
 }
 
 .populares_artistas,
@@ -88,7 +96,8 @@ img {
 }
 
 .populares__artistas__imagem,
-.populares_filmes__imagem {
+.populares_filmes__imagem,
+.lancamentos_filmes__imagem {
     width: 229px;
     height: 263px;
     left: 38px;
@@ -98,7 +107,8 @@ img {
 }
 
 .populares__artistas__nome,
-.populares_filmes__nome {
+.populares_filmes__nome,
+.lancamentos_filmes__nome {
     font-size: 21px;
     font-weight: bold;
     color: #C4C4C4;
@@ -139,15 +149,18 @@ img {
     cursor: pointer;
 }
 
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
 .categorias {
     display: flex;
 
 }
 
-.btnFilme,
-.btnSérie,
-.btnAnime,
-.btnDesenhos {
+.botoes_categoria {
     background-color: #171717;
     border: none;
     height: 42px;
@@ -160,18 +173,13 @@ img {
     cursor: pointer;
 }
 
-.btnFilme:hover,
-.btnSérie:hover,
-.btnAnime:hover,
-.btnDesenhos:hover,
-.btnEntrar:hover,
-.btnCadastro:hover {
-    background-color: #FFFFFF;
+.botoes_categoria:hover,
+.botoes_entrar:hover {
+    background-color: #E16428;
     color: #171717;
 }
 
-.btnEntrar,
-.btnCadastro {
+.botoes_entrar {
     background-color: #171717;
     border: none;
     height: 42px;
@@ -181,19 +189,16 @@ img {
     font-weight: bold;
     font-size: 12px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
-.btnCadastro {
+
+#botao_cadastro {
     margin-right: 30px;
 }
 
-.botoes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-}
-
-.populares_filmes__data {
+.populares_filmes__data,
+.lancamentos_filmes__data {
     color: #E16428;
     font-weight: bold;
     text-align: center;
@@ -203,13 +208,15 @@ img {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
+    justify-content: flex-end;
+    /*alinhou o trailer e o texto*/
 
 }
 
 .container_top1 {
     display: flex;
     background-color: #171717;
-    height: 300px;
+    height: auto;
     margin-right: 30px;
     margin-left: 30px;
     border-radius: 27px;
@@ -228,24 +235,24 @@ img {
     font-weight: bold;
     font-size: 34px;
     color: #E16428;
+    margin: 0;
 }
 
 .populares_filmes__sinopse {
     font-size: 17px;
     color: #FFFFFF;
-    width: 70%;
+    width: 80%;
     margin-top: 30px;
+    margin-bottom: 50px;
 
 }
 
 .trailer_top1 {
     display: flex;
-}
-
-.trailer {
-    margin-top: 50px;
+    align-items: center;
     margin-right: 50px;
 }
+
 
 
 ::-webkit-scrollbar {
@@ -260,4 +267,16 @@ img {
 ::-webkit-scrollbar-thumb {
     background-color: #E16428;
     border-radius: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+    background-color: #171717;
+    margin-top: 50px;
+}
+
+.logo_rodape {
+    height: 100px;
 }
