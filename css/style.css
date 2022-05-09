@@ -1,50 +1,8 @@
-body,
-ul,
-li,
-p {
+* {
     margin: 0px;
     padding: 0px;
     list-style: none;
     font-family: 'Nunito', sans-serif;
-}
-
-
-.menu-principal {
-    background: #171717;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-
-}
-
-.redes-sociais {
-    display: flex;
-    padding: 50px 30px;
-
-}
-
-.icone-rede-social {
-    height: auto;
-    width: 30px;
-    margin-left: 20px;
-}
-
-#logo {
-    height: 120px;
-    width: 300px;
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    margin: 0;
-}
-
-#menu_header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-
 }
 
 body {
@@ -56,6 +14,161 @@ img {
     display: block;
 }
 
+.menu-principal {
+    background: #171717;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+#logo-socialMedia {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-content {
+    display: block;
+    width: 100%;
+}
+
+#logo {
+    height: 120px;
+    width: 300px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.redes-sociais {
+    display: flex;
+    padding: 50px 30px;
+
+}
+
+.icone-rede-social {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    display: block;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    text-indent: -1000px;
+}
+
+#facebook {
+    background-image: url(../img/face.png);
+}
+
+#twitter {
+    background-image: url(../img/tw.png);
+}
+
+#linkedin {
+    background-image: url(../img/linkedin.png)
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    background-color: #222B31;
+    padding-top: 30px;
+
+}
+
+#divBusca {
+    display: flex;
+    background-color: #171717;
+    border: solid 2px #E16428;
+    border-radius: 10px;
+    width: 310px;
+    height: 32px;
+    margin-left: 30px;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 37px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    height: 32px;
+    width: 191px;
+    color: #C4C4C4;
+}
+
+#btnBusca {
+    border: none;
+    height: 32px;
+    border-radius: 0 7px 7px 0;
+    width: 80px;
+    font-weight: bold;
+    font-size: 13px;
+    background: #e16428;
+    cursor: pointer;
+}
+
+.categorias {
+    display: flex;
+}
+
+.botoes_categoria {
+    background-color: #171717;
+    border: none;
+    height: 42px;
+    width: 90px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botoes_categoria:hover,
+.botoes_entrar:hover {
+    background-color: #E16428;
+    color: #171717;
+}
+
+.cadastro {
+    display: flex;
+}
+
+.botoes_entrar {
+    background-color: #171717;
+    border: none;
+    height: 42px;
+    width: 90px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#botao_cadastro {
+    margin-right: 30px;
+}
+
 .titulo_artistas,
 .titulo_filmes,
 .titulo_filmes__lancamentos {
@@ -64,6 +177,7 @@ img {
     font-weight: bold;
     margin-left: 30px;
     margin-top: 50px;
+    margin-bottom: 20px;
 
 }
 
@@ -116,101 +230,11 @@ img {
     text-align: center;
 }
 
-#divBusca {
-    display: flex;
-    background-color: #171717;
-    border: solid 2px #E16428;
-    border-radius: 10px;
-    width: 310px;
-    height: 32px;
-    margin-left: 30px;
-}
-
-#txtBusca {
-    float: left;
-    background-color: transparent;
-    padding-left: 37px;
-    font-size: 13px;
-    font-weight: bold;
-    border: none;
-    height: 32px;
-    width: 191px;
-    color: #C4C4C4;
-}
-
-#btnBusca {
-    border: none;
-    height: 32px;
-    border-radius: 0 7px 7px 0;
-    width: 80px;
-    font-weight: bold;
-    font-size: 13px;
-    background: #e16428;
-    cursor: pointer;
-}
-
-.botoes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-}
-
-.categorias {
-    display: flex;
-
-}
-
-.botoes_categoria {
-    background-color: #171717;
-    border: none;
-    height: 42px;
-    width: 82px;
-    margin-left: 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 13px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-.botoes_categoria:hover,
-.botoes_entrar:hover {
-    background-color: #E16428;
-    color: #171717;
-}
-
-.botoes_entrar {
-    background-color: #171717;
-    border: none;
-    height: 42px;
-    width: 82px;
-    margin-left: 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 12px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-
-#botao_cadastro {
-    margin-right: 30px;
-}
-
 .populares_filmes__data,
 .lancamentos_filmes__data {
     color: #E16428;
     font-weight: bold;
     text-align: center;
-}
-
-.box_top1 {
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-    justify-content: flex-end;
-    /*alinhou o trailer e o texto*/
-
 }
 
 .container_top1 {
@@ -221,6 +245,15 @@ img {
     margin-left: 30px;
     border-radius: 27px;
     margin-top: 50px;
+}
+
+.box_top1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    justify-content: flex-end;
+    /*alinhou o trailer e o texto*/
+
 }
 
 .titulo_top1 {
