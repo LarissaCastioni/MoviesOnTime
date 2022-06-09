@@ -1,0 +1,22 @@
+@import '../abstract/variaveis';
+@import '../abstract/reset';
+
+.menu-principal {
+    background: $cor-secundaria;
+
+    #logo-socialMedia {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*.header-content {
+        display: block;
+        width: 100%;
+    }*/
+
+    #logo {
+        background-image: url(../../img/logo.png);
+        height: 120px;
+        width: 300px;
+    }
+}
