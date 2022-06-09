@@ -1,0 +1,45 @@
+@import '../abstract/variaveis';
+@import '../abstract/reset';
+
+.populares {
+    &_titulo {
+        color: $cor-branco;
+        font-size: $tamanho-texto*1.5;
+        font-weight: bold;
+        margin: 50px 0 20px 30px;
+    }
+
+    &_container {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px;
+        justify-content: space-around;
+
+        &_content {
+
+            &_imagem {
+                border-radius: 2%;
+                width: 230px;
+                height: 263px;
+                cursor: pointer;
+            }
+
+            &_nome {
+                color: $cor-nome;
+                text-align: center;
+                font-size: 1.3rem;
+                margin-top: 22px;
+                font-weight: bold;
+            }
+
+            &_data {
+                color: $cor-terciaria;
+                font-weight: bold;
+                text-align: center;
+
+            }
+        }
+    }
+
+
+
+}

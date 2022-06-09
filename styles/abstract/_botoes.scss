@@ -1,0 +1,9 @@
+@import '../abstract/variaveis';
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    background-color: $cor-primaria;
+    padding-top: 30px;
+}

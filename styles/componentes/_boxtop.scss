@@ -1,0 +1,44 @@
+@import '../abstract/variaveis';
+
+.top1 {
+    &_container {
+        display: flex;
+        background-color: $cor-secundaria;
+        height: 500px;
+        margin: 50px 30px 0 30px;
+        border-radius: 27px;
+
+        &_content {
+            margin-left: 50px;
+            width: 50%;
+
+            &_titulo {
+                font-size: 25px;
+                color: $cor-branco;
+                margin-top: 50px;
+            }
+
+            &_nome {
+                font-weight: bold;
+                font-size: 30px;
+                color: $cor-terciaria;
+                margin-top: 25px;
+            }
+
+            &_sinopse {
+                color: $cor-branco;
+                font-size: 17px;
+                margin-top: 10px;
+
+            }
+
+        }
+
+        &_imagem {
+            margin: 50px 0 50px 80px;
+        }
+
+    }
+
+
+}

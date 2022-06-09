@@ -1,0 +1,31 @@
+@import '../abstract/reset';
+
+.redes-sociais {
+    display: flex;
+    padding: 50px 30px;
+
+    .icone-rede-social {
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin-left: 20px;
+        overflow: hidden;
+        text-indent: -1000px;
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    #facebook {
+        background-image: url(/img/face.png);
+    }
+
+    #twitter {
+        background-image: url(/img/tw.png);
+    }
+
+    #linkedin {
+        background-image: url(/img/linkedin.png);
+    }
+}

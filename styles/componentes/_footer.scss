@@ -1,0 +1,13 @@
+@import '../abstract/variaveis';
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+    background-color: #171717;
+    margin-top: 50px;
+}
+
+.logo_rodape {
+    height: 100px;
+}

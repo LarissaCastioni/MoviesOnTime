@@ -1,0 +1,33 @@
+@import '../abstract/variaveis';
+
+#divBusca {
+    display: flex;
+    background-color: $cor-secundaria;
+    border: solid 2px $cor-terciaria;
+    border-radius: 10px;
+    width: 310px;
+    height: 32px;
+    margin-left: 1rem;
+
+    #txtBusca {
+        background-color: transparent;
+        padding-left: 37px;
+        font-size: 1rem;
+        color: $cor-branco;
+        border: none;
+        height: 32px;
+        width: 250px;
+
+    }
+
+    #btnBusca {
+        cursor: pointer;
+        background-color: $cor-terciaria;
+        width: 80px;
+        font-size: 1rem;
+        color: $cor-secundaria;
+        font-weight: bold;
+        border-radius: 0 7px 7px 0;
+    }
+
+}
